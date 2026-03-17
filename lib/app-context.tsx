@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from "react"
 
-type Page = "login" | "dashboard" | "ingestion" | "parsing" | "ledger" | "quarantine" | "audit" | "health" | "settings"
+type Page = "login" | "dashboard" | "ingestion" | "parsing" | "magic-query" | "ledger" | "quarantine" | "audit" | "health" | "settings"
 
 interface AppContextType {
   currentPage: Page

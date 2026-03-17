@@ -12,6 +12,7 @@ import { AuditPage } from "@/components/audit-page"
 import { HealthPage } from "@/components/health-page"
 import { SettingsPage } from "@/components/settings-page"
 import { ParsingPage } from "@/components/parsing-page"
+import { MagicQueryPage } from "@/components/magic-query-page"
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
@@ -32,6 +33,7 @@ function AppContent() {
             {currentPage === "dashboard" && <DashboardPage />}
             {currentPage === "ingestion" && <IngestionPage />}
             {currentPage === "parsing" && <ParsingPage />}
+            {currentPage === "magic-query" && <MagicQueryPage />}
             {currentPage === "ledger" && <LedgerPage />}
             {currentPage === "quarantine" && <QuarantinePage />}
             {currentPage === "audit" && <AuditPage />}

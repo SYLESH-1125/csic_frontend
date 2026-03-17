@@ -9,6 +9,7 @@ const pageLabels: Record<string, string> = {
   dashboard: "Main Dashboard",
   ingestion: "Ingestion Phase / Injection Control",
   parsing: "Parsing Phase / Hybrid Parsing & Normalization",
+  "magic-query": "Magic Query / Natural Language Log Investigation",
   ledger: "Ingestion Phase / Ledger View",
   quarantine: "Ingestion Phase / Quarantine Center",
   audit: "Ingestion Phase / Audit Trails",

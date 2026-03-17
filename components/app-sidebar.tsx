@@ -17,6 +17,7 @@ import {
   ScanSearch,
   Clock4,
   UserCheck,
+  Wand2,
 } from "lucide-react"
 import {
   Sidebar,
@@ -33,7 +34,7 @@ import {
 } from "@/components/ui/sidebar"
 import { useApp } from "@/lib/app-context"
 
-type Page = "dashboard" | "ingestion" | "parsing" | "ledger" | "quarantine" | "audit" | "health" | "settings"
+type Page = "dashboard" | "ingestion" | "parsing" | "magic-query" | "ledger" | "quarantine" | "audit" | "health" | "settings"
 
 const ingestionSubItems: { id: Page; label: string; icon: typeof Upload }[] = [
   { id: "ingestion", label: "Injection Control", icon: Upload },
@@ -186,6 +187,23 @@ export function AppSidebar() {
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
+
+              {/* Magic Query */}
+              <SidebarMenuItem>
+                <SidebarMenuButton
+                  isActive={currentPage === "magic-query"}
+                  onClick={() => setCurrentPage("magic-query")}
+                  tooltip="Magic Query"
+                  className={
+                    currentPage === "magic-query"
+                      ? "bg-primary/10 text-primary font-medium border-l-2 border-primary rounded-none"
+                      : "text-foreground hover:bg-muted"
+                  }
+                >
+                  <Wand2 className="size-4" />
+                  <span>Magic Query</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
